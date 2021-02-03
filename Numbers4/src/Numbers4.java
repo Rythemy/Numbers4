@@ -5,7 +5,7 @@ public class Numbers4 {
 	public int yourNumber[] = {0, 0, 0, 0};
 	public int houseNumber[] = {0, 0, 0, 0};
 	Random rand = new Random();
-	int upperbound = 9;
+	int UPPER_BOUND = 9;
 	
 	public void askForDecision (Scanner scan) {
 		System.out.println("Do you want to choose 4 numbers manually or automatically?");
@@ -35,7 +35,7 @@ public class Numbers4 {
 	
 	public void generateNumbers() {
 		for (int i = 0; i < yourNumber.length; i++) {
-			yourNumber[i] = rand.nextInt(upperbound);
+			yourNumber[i] = rand.nextInt(UPPER_BOUND);
 		}
 	}
 	
@@ -45,7 +45,7 @@ public class Numbers4 {
 	
 	public void draw() {
 		for (int i = 0; i < houseNumber.length; i++) {
-			houseNumber[i] = rand.nextInt(upperbound);
+			houseNumber[i] = rand.nextInt(UPPER_BOUND);
 		}
 		
 		System.out.printf("The winner numbers are: %d, %d, %d, %d\n", houseNumber[0], houseNumber[1], houseNumber[2], houseNumber[3]);
